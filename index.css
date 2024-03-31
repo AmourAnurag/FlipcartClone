@@ -16,13 +16,13 @@ header {
   background-color: white;
   height: 50px;
   display: flex;
-  justify-content: space-between; /* Adjusted */
+  /* justify-content: space-between; Adjusted */
   align-items: center;
 }
 
 .first-header {
   display: flex;
-  width: 60%;
+  width: 58%;
   gap: 2%;
   align-items: center;
   margin: 0px 20px;
