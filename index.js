@@ -25,7 +25,7 @@ function slideShow() {
   slideShow.innerHTML = `
     <a class="prev" onclick="plusSlides(-2)">&#10094;</a>
     <div id="slide-image-container">
-    <img src="./slide/slide${imageCount}.webp" alt="" width="100%">
+    <img src="./slide/slide${imageCount}.webp" alt="" width="100%" height="100%">
     
   </div>
 

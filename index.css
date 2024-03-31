@@ -120,6 +120,7 @@ select:hover {
   #menu,.logo2{
     display: block;
   }
+
 }
 
 /* Product-Type */
@@ -150,16 +151,17 @@ select:hover {
   margin: 2%;
   width: auto;
   background-color: white;
-  height: auto;
+  height: 100px;
   display: flex;
   align-items: center;
   border-radius: 6px;
   overflow: hidden;
 }
-#slide-img-container{
+#slide-image-container{
   position: relative;
   width: 100%;
-  margin: 0 5%;
+  height: 100%;
+  margin: 0 2%;
 }
 .prev, .next {
   cursor: pointer;
