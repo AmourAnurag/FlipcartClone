@@ -93,35 +93,6 @@ select:hover {
   font-size: 10px;
 
 }
-/* Media Queries for Responsiveness */
-
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    width: auto;
-    height: auto;
-    padding: 10px 0;
-  }
-
-  .first-header,
-  .search-div,
-  .second-header {
-    width: 90%;
-    margin:  0;
-  }
-
-  .search-div {
-    /* flex-direction: column; */
-    align-items: stretch;
-  }
-  .logo1,.second-header{
-    display: none;
-  }
-  #menu,.logo2{
-    display: block;
-  }
-
-}
 
 /* Product-Type */
 #overview {
@@ -151,7 +122,7 @@ select:hover {
   margin: 2%;
   width: auto;
   background-color: white;
-  height: 100px;
+  height: 170px;
   display: flex;
   align-items: center;
   border-radius: 6px;
@@ -225,4 +196,38 @@ select:hover {
   height: 120px;
   width: 140px;
   margin: 1%;
+}
+
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .first-header,
+  .search-div,
+  .second-header {
+    width: 90%;
+    margin:  0;
+  }
+
+  .search-div {
+    /* flex-direction: column; */
+    align-items: stretch;
+  }
+  .logo1,.second-header{
+    display: none;
+  }
+  #menu,.logo2{
+    display: block;
+  }
+  #slide-window{
+    height: 100px;
+  }
+
 }
