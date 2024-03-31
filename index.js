@@ -75,7 +75,7 @@ const container1 = document.querySelector('.below-slide-window-container1');
 toy.image.forEach((imagePath, index) => {
     // Create card element
     const card = document.createElement('div');
-    card.classList.add('below-slide-window-card');
+    card.classList.add('below-slide-window-card1');
 
     // Create image element
     const img = document.createElement('img');
