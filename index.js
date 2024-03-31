@@ -1,5 +1,6 @@
 let imageCount = 1;
 import elec from "./elec.js";
+import toy from "./toy.js";
 console.log(elec);
 let images = elec.image;
 console.log(images);
@@ -68,4 +69,35 @@ elec.image.forEach((imagePath, index) => {
 
     // Append card to the container
     container.appendChild(card);
+});
+const container1 = document.querySelector('.below-slide-window-container1');
+
+toy.image.forEach((imagePath, index) => {
+    // Create card element
+    const card = document.createElement('div');
+    card.classList.add('below-slide-window-card');
+
+    // Create image element
+    const img = document.createElement('img');
+    img.src = imagePath;
+    img.alt = "Electronics Image";
+    img.classList.add('below-slide-window-card-img');
+
+    // Create price element
+    const price = document.createElement('div');
+    price.classList.add('price');
+    price.textContent = "Price: $" + toy.price[index].price;
+
+    // Create message element
+    const message = document.createElement('div');
+    message.classList.add('message');
+    message.textContent = toy.price[index].msg;
+
+    // Append elements to the card
+    card.appendChild(img);
+    card.appendChild(price);
+    card.appendChild(message);
+
+    // Append card to the container
+    container1.appendChild(card);
 });
