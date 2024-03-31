@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -31,7 +31,7 @@ header {
 .first-header input {
   font-size: 20px;
   outline: none;
-  width: 100%; 
+  width: 100%;
   background-color: rgb(235, 237, 242);
   border: none;
 }
@@ -48,7 +48,7 @@ header {
 }
 
 .second-header {
-  width:30%;
+  width: 30%;
   display: flex;
   align-items: center;
 }
@@ -83,15 +83,15 @@ select:hover {
   color: aliceblue;
 }
 
-#menu,.logo2{
+#menu,
+.logo2 {
   display: none;
 }
-#cart-sup{
+#cart-sup {
   background-color: rgb(236, 78, 25);
   padding: 2px;
   border-radius: 50%;
   font-size: 10px;
-
 }
 
 /* Product-Type */
@@ -100,24 +100,23 @@ select:hover {
   margin: 1% 2%;
   width: auto;
   background-color: white;
-  border-radius:8px ;
+  border-radius: 8px;
   height: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: auto;
 }
-.product-type{
+.product-type {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1%;
   font-weight: 800;
-  
 }
 
 /* Slide-Window */
-#slide-window{
+#slide-window {
   position: relative;
   margin: 2%;
   width: auto;
@@ -128,15 +127,16 @@ select:hover {
   border-radius: 6px;
   overflow: hidden;
 }
-#slide-image-container{
+#slide-image-container {
   position: relative;
   width: 100%;
   height: 100%;
   margin: 0 2%;
 }
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
-  padding:1% 2%;
+  padding: 1% 2%;
   width: auto;
   display: block;
   color: rgb(19, 19, 19);
@@ -146,19 +146,19 @@ select:hover {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-.below-slide-window{
+.below-slide-window {
   width: auto;
   padding: 1%;
   border-radius: 6px;
   margin: 2%;
   height: auto;
-  background-color:white;
+  background-color: white;
 }
-.below-slide-window-container{
+.below-slide-window-container {
   padding: 10px;
   width: auto;
   background-color: white;
-  border-radius:8px ;
+  border-radius: 8px;
   height: 30%;
   display: flex;
   justify-content: space-between;
@@ -170,47 +170,50 @@ select:hover {
 }
 
 /* Hide scrollbar for specific element */
-.below-slide-window-container::-webkit-scrollbar { 
+.below-slide-window-container::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
-} 
-.below-slide-window-card,.below-slide-window-card1{
+}
+.below-slide-window-card,
+.below-slide-window-card1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-    height: 220px;
+  height: 220px;
   width: 170px;
   border: 0.5px solid silver;
   padding: 1%;
-  margin:  1%;
+  margin: 1%;
   font-weight: 800;
   border-radius: 6px;
 }
 .price,
 .message {
-    margin-top: 15px;
-    font-size: 12px;
-    color: #333; /* Example color */
+  margin-top: 15px;
+  font-size: 12px;
+  color: #333; /* Example color */
 }
-.message{color: #2874f0;}
-.below-slide-window-card-img{
+.message {
+  color: #2874f0;
+}
+.below-slide-window-card-img,
+.below-slide-window-card-img1 {
   height: 120px;
   width: 140px;
   margin: 1%;
 }
-.below-slide-window-container1{
+.below-slide-window-container1 {
   padding: 10px;
   width: auto;
   height: auto;
   background-color: white;
-  border-radius:8px ;
+  border-radius: 8px;
   height: 30%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
 }
-footer{
+footer {
   width: 100%;
   align-items: center;
   font-weight: 700;
@@ -232,30 +235,39 @@ footer{
   .search-div,
   .second-header {
     width: 90%;
-    margin:  0;
+    margin: 0;
   }
 
   .search-div {
     /* flex-direction: column; */
     align-items: stretch;
   }
-  .logo1,.second-header{
+  .logo1,
+  .second-header {
     display: none;
   }
-  #menu,.logo2{
+  #menu,
+  .logo2 {
     display: block;
   }
-  #slide-window{
+  #slide-window {
     height: 100px;
   }
-
 }
 @media screen and (max-width: 398px) {
-  .below-slide-window-container1{
+  .below-slide-window-container1 {
     align-items: center;
   }
-  .below-slide-window-card1{
+  .below-slide-window-card1 {
     width: 290px;
+    height: auto;
     margin: 10px 25px;
+  }
+  .below-slide-window-card-img1 {
+    height: 190px;
+  }
+  .price,
+  .message {
+    font-size: 18px;
   }
 }

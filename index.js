@@ -81,7 +81,7 @@ toy.image.forEach((imagePath, index) => {
     const img = document.createElement('img');
     img.src = imagePath;
     img.alt = "Electronics Image";
-    img.classList.add('below-slide-window-card-img');
+    img.classList.add('below-slide-window-card-img1');
 
     // Create price element
     const price = document.createElement('div');
