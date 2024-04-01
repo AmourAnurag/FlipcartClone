@@ -76,6 +76,8 @@ header {
   outline: none;
   border: none;
   font-size: 17px;
+  text-decoration: none;
+  
 }
 
 select:hover {
@@ -88,10 +90,12 @@ select:hover {
   display: none;
 }
 #cart-sup {
-  background-color: rgb(236, 78, 25);
-  padding: 2px;
+  /* background-color: rgb(236, 78, 25); */
+
   border-radius: 50%;
+  font-weight: 900;
   font-size: 10px;
+  color: red;
 }
 
 /* Product-Type */

@@ -1,4 +1,6 @@
 let imageCount = 1;
+let totalCartItem=0;
+
 import elec from "./elec.js";
 import toy from "./toy.js";
 
@@ -142,6 +144,7 @@ toy.image.forEach((imagePath, index) => {
 
     // Attach event listeners to "Add to Cart" and "Buy" buttons
     button.addEventListener("click", function () {
+        
         const productImage=imagePath
         const productName = toy.price[index].rating;
         const productPrice = toy.price[index].price;
@@ -151,7 +154,7 @@ toy.image.forEach((imagePath, index) => {
         addToCartAndRedirect(productImage,productName, productPrice,productPay,productDiscount);
     });
     button1.addEventListener("click", function () {
-        window.location.href = "./overview.html";
+        window.location.href = "./cart.html";
     });
 
     // Append elements to the card
@@ -163,3 +166,11 @@ toy.image.forEach((imagePath, index) => {
     // Append card to the container
     container1.appendChild(card);
 });
+
+//update cart icon
+
+const cartCount=document.querySelector('#cart-sup')
+const cartArrayString = localStorage.getItem('cart');
+const cartArray = JSON.parse(cartArrayString);
+const arrayLength = cartArray.length;
+cartCount.textContent=arrayLength
