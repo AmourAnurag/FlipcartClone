@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body style="background-color: white;">
-    <h1>Shopping Cart</h1>
+    <h1 style="color: rgb(42, 42, 245); margin: 15px;;width: 100%;">Shopping Cart</h1>
     <div id="cart-items"></div>
     <div id="shopping-cart"></div>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Retrieve cart items from localStorage
-            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    <div id="payment"></div>
+</body>
+<script>
 
-            const cartItemsContainer = document.getElementById('cart-items');
+    let discount = 0, pay = 0, total = 0;
 
-            // Check if the cart is empty
-            if (cartItems.length === 0) {
-                cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
-            } else {
-                // Display each item in the cart
-                cartItems.forEach(item => {
-                    console.log(item);
-                    console.log(item.image);
-                   
-                    const itemElement = document.createElement('div');
-                    itemElement.classList.add("shopping-cart")
-                    itemElement.innerHTML = `
+    document.addEventListener("DOMContentLoaded", function () {
+        // Retrieve cart items from localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const cartItemsContainer = document.getElementById('cart-items');
+
+        // Check if the cart is empty
+        if (cartItems.length === 0) {
+            cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+        } else {
+            // Display each item in the cart
+            cartItems.forEach(item => {
+                console.log(item);
+                console.log(item.image);
+
+                const itemElement = document.createElement('div');
+                itemElement.classList.add("shopping-cart")
+
+                itemElement.innerHTML = `
                     
                         <div>
                             <div class="below-slide-window-card1">
@@ -40,10 +47,22 @@
                         </div>
                    
                     `;
-                    cartItemsContainer.appendChild(itemElement);
-                });
-            }
-        });
-    </script>
-</body>
+                const paymentContainer = document.querySelector('#payment')
+                total = total + Number(item.price)
+                discount += Number(item.discount)
+                pay += Number(item.pay)
+                paymentContainer.innerHTML = `
+                     <div style="margin:20px;padding:10px; color:rgb(42, 42, 245);;width:auto;gap:12px">
+                     <h2>Total : ${total}</h2>
+                     <h2>Total Discount : ${discount}%</h2>
+                     <h2>You need to Pay : ${pay}</h2>
+                     </div>
+                    `
+                cartItemsContainer.appendChild(itemElement);
+            });
+        }
+    });
+</script>
+
+
 </html>
