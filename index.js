@@ -1,9 +1,9 @@
 let imageCount = 1;
 import elec from "./elec.js";
 import toy from "./toy.js";
-console.log(elec);
-let images = elec.image;
-console.log(images);
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.getElementById("menu");
   const secondHeader = document.querySelector(".second-header");
@@ -35,6 +35,8 @@ function slideShow() {
   imageCount++;
 }
 setInterval(slideShow, 2000);
+
+
 // Section below slide show
 
 
@@ -92,11 +94,33 @@ toy.image.forEach((imagePath, index) => {
     const message = document.createElement('div');
     message.classList.add('message');
     message.textContent = toy.price[index].msg;
-
+   
+    //Create AddToCart Button
+    const div=document.createElement('div')
+    div.classList.add('button-div')
+    const button=document.createElement('button');
+    const button1=document.createElement('button');
+    button.classList.add('addtocart-button');
+    button1.classList.add('addtocart-button');
+    button.innerText="Add to Cart"
+    button1.innerText="Buy"
+    div.appendChild(button)
+    div.appendChild(button1)
+    //calling function through button
+    function addToCart(params) {
+      window.location.href = "./overview.html";
+    }
+    function buy(params) {
+      window.location.href = "./overview.html";
+    }
+    button.addEventListener('click',addToCart)
+    button1.addEventListener('click',buy)
     // Append elements to the card
     card.appendChild(img);
     card.appendChild(price);
     card.appendChild(message);
+    card.appendChild(div);
+    
 
     // Append card to the container
     container1.appendChild(card);
