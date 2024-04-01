@@ -91,7 +91,7 @@ select:hover {
 }
 #cart-sup {
   /* background-color: rgb(236, 78, 25); */
-
+  font-family:Arial, Helvetica, sans-serif;
   border-radius: 50%;
   font-weight: 900;
   font-size: 10px;
