@@ -228,8 +228,9 @@ select:hover {
   padding: 5px 12px;
   background-color: #3f48f0d6;
   color: aliceblue;
+  border: none;
   font-size: 15px;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 #about-site{
  border-radius: 6px;
@@ -254,6 +255,18 @@ footer {
   font-weight: 700;
   text-align: center;
   font-size: 25px;
+}
+
+
+/* CSS for shopping cart */
+.shopping-cart{
+  display: inline-block;
+  flex-wrap: wrap;
+  margin: 3%;
+  height: auto;
+  justify-content: center;
+  font-size: 12px;
+ 
 }
 
 /* Media Queries for Responsiveness */
