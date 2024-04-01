@@ -189,20 +189,20 @@ select:hover {
 .below-slide-window-card1{
   padding: 0;
 }
-.price,
-.message {
-  margin-top: 5px;
+.divRating{
+  display: flex;
+  justify-content: space-between;
   font-size: 12px;
-  color: #333; /* Example color */
-}
-.message {
-  color: #2874f0;
+  margin: 1px;
+  align-items: center;
+  width: 90%;
 }
 .below-slide-window-card-img,
 .below-slide-window-card-img1 {
   height: 120px;
   width: 140px;
   margin: 1%;
+  margin-bottom: 15px;
 }
 .below-slide-window-container1 {
   padding: 10px;
@@ -301,8 +301,7 @@ footer {
   .below-slide-window-card-img1 {
     height: 190px;
   }
-  .price,
-  .message {
+  .divRating {
     font-size: 18px;
   }
 }

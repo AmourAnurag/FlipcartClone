@@ -3,7 +3,7 @@ import elec from "./elec.js";
 import toy from "./toy.js";
 
 
-
+//menu bar button code
 document.addEventListener("DOMContentLoaded", function () {
   const menuButton = document.getElementById("menu");
   const secondHeader = document.querySelector(".second-header");
@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
       secondHeader.style.display === "none" ? "flex" : "none";
   });
 });
+
+
 // Section for slide Show
 slideShow();
 function plusSlides(num) {
@@ -37,91 +39,105 @@ function slideShow() {
 setInterval(slideShow, 2000);
 
 
-// Section below slide show
-
-
-//Here you can use the `elec` object to display images, prices, etc.
-const container = document.querySelector('.below-slide-window-container');
-
+// Section below slide show display the images this section is for best of electronics
+const container = document.querySelector(".below-slide-window-container");
 elec.image.forEach((imagePath, index) => {
-    // Create card element
-    const card = document.createElement('div');
-    card.classList.add('below-slide-window-card');
+  // Create card element
+  const card = document.createElement("div");
+  card.classList.add("below-slide-window-card");
 
-    // Create image element
-    const img = document.createElement('img');
-    img.src = imagePath;
-    img.alt = "Electronics Image";
-    img.classList.add('below-slide-window-card-img');
+  // Create image element
+  const img = document.createElement("img");
+  img.src = imagePath;
+  img.alt = "Electronics Image";
+  img.classList.add("below-slide-window-card-img");
 
-    // Create price element
-    const price = document.createElement('div');
-    price.classList.add('price');
-    price.textContent = "Price: $" + elec.price[index].price;
+  // Create price element
+  const price = document.createElement("div");
+  price.classList.add("price");
+  price.textContent = "Price: $" + elec.price[index].price;
 
-    // Create message element
-    const message = document.createElement('div');
-    message.classList.add('message');
-    message.textContent = elec.price[index].msg;
+  // Create message element
+  const message = document.createElement("div");
+  message.classList.add("message");
+  message.textContent = elec.price[index].msg;
 
-    // Append elements to the card
-    card.appendChild(img);
-    card.appendChild(price);
-    card.appendChild(message);
+  // Append elements to the card
+  card.appendChild(img);
+  card.appendChild(price);
+  card.appendChild(message);
 
-    // Append card to the container
-    container.appendChild(card);
+  // Append card to the container
+  container.appendChild(card);
 });
-const container1 = document.querySelector('.below-slide-window-container1');
 
+
+//section for beauty and toys more
+const container1 = document.querySelector(".below-slide-window-container1");
 toy.image.forEach((imagePath, index) => {
-    // Create card element
-    const card = document.createElement('div');
-    card.classList.add('below-slide-window-card1');
+  // Create card element
+  const card = document.createElement("div");
+  card.classList.add("below-slide-window-card1");
 
-    // Create image element
-    const img = document.createElement('img');
-    img.src = imagePath;
-    img.alt = "Electronics Image";
-    img.classList.add('below-slide-window-card-img1');
+  // Create image element
+  const img = document.createElement("img");
+  img.src = imagePath;
+  img.alt = "Electronics Image";
+  img.classList.add("below-slide-window-card-img1");
 
-    // Create price element
-    const price = document.createElement('div');
-    price.classList.add('price');
-    price.textContent = "Price: $" + toy.price[index].price;
+  // Create price and rating element
 
-    // Create message element
-    const message = document.createElement('div');
-    message.classList.add('message');
-    message.textContent = toy.price[index].msg;
-   
-    //Create AddToCart Button
-    const div=document.createElement('div')
-    div.classList.add('button-div')
-    const button=document.createElement('button');
-    const button1=document.createElement('button');
-    button.classList.add('addtocart-button');
-    button1.classList.add('addtocart-button');
-    button.innerText="Add to Cart"
-    button1.innerText="Buy"
-    div.appendChild(button)
-    div.appendChild(button1)
-    //calling function through button
-    function addToCart(params) {
-      window.location.href = "./overview.html";
-    }
-    function buy(params) {
-      window.location.href = "./overview.html";
-    }
-    button.addEventListener('click',addToCart)
-    button1.addEventListener('click',buy)
-    // Append elements to the card
-    card.appendChild(img);
-    card.appendChild(price);
-    card.appendChild(message);
-    card.appendChild(div);
-    
+  const divRating = document.createElement("div");
+  divRating.classList.add("divRating");
+  const price = document.createElement("span");
+  const rating = document.createElement("span");
+  price.textContent = "M.R.P : $" + toy.price[index].price;
+  rating.textContent = toy.price[index].rating;
+  divRating.appendChild(price);
+  divRating.appendChild(rating);
 
-    // Append card to the container
-    container1.appendChild(card);
+  // Create pay and discount element
+
+  const messageDiv = document.createElement("div");
+  messageDiv.classList.add("divRating");
+  const pay = document.createElement("span");
+  const discount = document.createElement("span");
+  discount.style.color = "blue";
+  discount.textContent = "(Off upto " + toy.price[index].msg + " %)";
+  let dis = Number(toy.price[index].msg);
+  let totalPrice = Number(toy.price[index].price);
+  console.log(typeof totalPrice);
+  pay.textContent =
+    "Pay :$" + Math.floor(totalPrice - (totalPrice * dis) / 100);
+  messageDiv.appendChild(pay);
+  messageDiv.appendChild(discount);
+
+  //Create AddToCart Button
+  const div = document.createElement("div");
+  div.classList.add("button-div");
+  const button = document.createElement("button");
+  const button1 = document.createElement("button");
+  button.classList.add("addtocart-button");
+  button1.classList.add("addtocart-button");
+  button.innerText = "Add to Cart";
+  button1.innerText = "Buy";
+  div.appendChild(button);
+  div.appendChild(button1);
+  //calling function through button
+  function addToCart(params) {
+    window.location.href = "./overview.html";
+  }
+  function buy(params) {
+    window.location.href = "./overview.html";
+  }
+  button.addEventListener("click", addToCart);
+  button1.addEventListener("click", buy);
+  // Append elements to the card
+  card.appendChild(img);
+  card.appendChild(divRating);
+  card.appendChild(messageDiv);
+  card.appendChild(div);
+
+  // Append card to the container
+  container1.appendChild(card);
 });

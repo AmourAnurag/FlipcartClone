@@ -21,76 +21,94 @@ const toy={
     ],
     price:[
         {
+           rating:"4⭐ | 1.5k",
            price: "299",
-           msg:"Shop now"
+           msg:"8"
         },
         {
+           rating:"3⭐ | 1.4k",
            price: "1999",
-           msg:"45% off upto"
+           msg:"90"
         },
         {
-           price: "7099",
-           msg:"Cheapest product"
+           rating:"2⭐ | 1.8k",
+           price: "99",
+           msg:"8"
         },
         {
-           price: "3299",
-           msg:"off upto 42%"
+           rating:"4.5⭐ | 2.5k",
+           price: "299",
+           msg:"56"
         },
         {
+           rating:"4.7⭐ | 3.5k",
+           price: "299",
+           msg:"12"
+        },
+        {
+           rating:"1⭐ | 1k",
+           price: "199",
+           msg:"25"
+        },
+        {
+           rating:"4⭐ | 3.5k",
+           price: "499",
+           msg:"45"
+        },
+        {
+           rating:"4⭐ | 1.5k",
+           price: "399",
+           msg:"42"
+        },
+        {
+           rating:"4⭐ | 3.5k",
+           price: "99",
+           msg:"10"
+        },
+        {
+           rating:"2⭐ | 5.5k",
+           price: "299",
+           msg:"12"
+        },
+        {
+           rating:"3⭐ | 6.5k",
            price: "2299",
-           msg:"Shop now"
+           msg:"12"
         },
         {
+           rating:"4.1⭐ | 2.5k",
            price: "1899",
-           msg:"75% off upto"
+           msg:"56"
         },
         {
+           rating:"4.2⭐ | 9.5k",
            price: "1499",
-           msg:"Apply credit card"
+           msg:"23"
         },
         {
-           price: "1399",
-           msg:"42% off now"
+           rating:"4.7⭐ | 15k",
+           price: "399",
+           msg:"42"
         },
         {
-           price: "7099",
-           msg:"Cheapest product"
+           rating:"4⭐ | 1.5k",
+           price: "799",
+           msg:"56"
         },
         {
+           rating:"4⭐ | 1.5k",
            price: "3299",
-           msg:"off upto 42%"
+           msg:"42"
         },
-        {
-           price: "2299",
-           msg:"Shop now"
+        {  
+           rating:"4.8⭐ | 25k",
+           price: "299",
+           msg:"15"
         },
-        {
-           price: "1899",
-           msg:"75% off upto"
-        },
-        {
-           price: "1499",
-           msg:"Apply credit card"
-        },
-        {
-           price: "1399",
-           msg:"42% off now"
-        },
-        {
-           price: "7099",
-           msg:"Cheapest product"
-        },
-        {
-           price: "3299",
-           msg:"off upto 42%"
-        },
-        {
-           price: "2299",
-           msg:"Shop now"
-        },
-        {
-           price: "1899",
-           msg:"75% off upto"
+        {  
+           rating:"4.7⭐ | 15k",
+           price: "899",
+           msg:"75"
         }
     ]
 }
