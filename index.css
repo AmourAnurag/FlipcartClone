@@ -14,7 +14,7 @@ header {
   padding: 10px;
   width: 100%;
   background-color: white;
-  height: 50px;
+  height: 70px;
   display: flex;
   /* justify-content: space-between; Adjusted */
   align-items: center;
@@ -136,6 +136,10 @@ a .fa-cart-plus {
   border-radius: 6px;
   overflow: hidden;
 }
+
+
+
+
 #slide-image-container {
   position: relative;
   width: 100%;
@@ -212,6 +216,17 @@ a .fa-cart-plus {
   width: 140px;
   margin: 1%;
   margin-bottom: 15px;
+  transition: transform 0.5s ease;
+}
+.below-slide-window-card-img:hover {
+  transform: scale(1.1); 
+  height: 130px; 
+  width: 150px; 
+}.below-slide-window-card-img1:hover {
+  border-radius: 8px;
+  transform: scale(1.1); 
+  height: 130px; 
+  width: 150px; 
 }
 .below-slide-window-container1 {
   padding: 10px;
