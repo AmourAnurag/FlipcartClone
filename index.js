@@ -112,7 +112,7 @@ toy.image.forEach((imagePath, index) => {
     divRating.classList.add("divRating");
     const price = document.createElement("span");
     const rating = document.createElement("span");
-    price.textContent = "M.R.P : $" + toy.price[index].price;
+    price.textContent = "M.R.P : ₹" + toy.price[index].price;
     rating.textContent = toy.price[index].rating;
     divRating.appendChild(price);
     divRating.appendChild(rating);
@@ -126,7 +126,7 @@ toy.image.forEach((imagePath, index) => {
     discount.textContent = "(Off upto " + toy.price[index].msg + " %)";
     let dis = Number(toy.price[index].msg);
     let totalPrice = Number(toy.price[index].price);
-    pay.textContent = "Pay :$" + Math.floor(totalPrice - (totalPrice * dis) / 100);
+    pay.textContent = "Pay :₹" + Math.floor(totalPrice - (totalPrice * dis) / 100);
     messageDiv.appendChild(pay);
     messageDiv.appendChild(discount);
 
