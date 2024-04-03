@@ -342,3 +342,15 @@ footer {
     font-size: 18px;
   }
 }
+
+
+/* Feedback Section */
+#form{
+  width: auto;
+  padding: 8px;
+  gap: 15px;
+  margin: 2%;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+}
