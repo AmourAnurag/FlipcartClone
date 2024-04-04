@@ -331,16 +331,23 @@ footer {
     align-items: center;
   }
   .below-slide-window-card1 {
-    width: 290px;
+    width: 150px;
     height: auto;
-    margin: 10px 25px;
+    margin: 10px 5px
   }
-  .below-slide-window-card-img1 {
-    height: 190px;
-  }
+ 
   .divRating {
-    font-size: 18px;
+    font-size: 12px;
   }
+  .addtocart-button {
+    padding: 6px ;
+    font-size: 14px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+.button-div{
+  justify-content: space-between;
+}
 }
 
 
