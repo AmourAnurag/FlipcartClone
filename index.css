@@ -366,7 +366,7 @@ footer {
   }
   .below-slide-window-card1 {
     width: 140px;
-    height: auto;
+    height: 187px;
     margin: 10px 5px;
   }
   .below-slide-window-card-img1 {
@@ -378,7 +378,7 @@ footer {
     font-size: 11px;
   }
   .addtocart-button {
-    padding: 6px;
+    padding: 4px 7px;
     font-size: 14px;
     margin-top: 10px;
     border-radius: 6px;
