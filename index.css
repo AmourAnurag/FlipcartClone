@@ -77,14 +77,13 @@ header {
   border: none;
   font-size: 17px;
   text-decoration: none;
-  
 }
 
 select:hover {
   background-color: #2874f0;
   color: aliceblue;
 }
-a{
+a {
   text-decoration: none;
 }
 a .fa-cart-plus {
@@ -96,7 +95,7 @@ a .fa-cart-plus {
 }
 #cart-sup {
   /* background-color: rgb(236, 78, 25); */
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   border-radius: 50%;
   font-weight: 900;
   font-size: 10px;
@@ -136,9 +135,6 @@ a .fa-cart-plus {
   border-radius: 6px;
   overflow: hidden;
 }
-
-
-
 
 #slide-image-container {
   position: relative;
@@ -199,10 +195,10 @@ a .fa-cart-plus {
   font-weight: 800;
   border-radius: 6px;
 }
-.below-slide-window-card1{
+.below-slide-window-card1 {
   padding: 0;
 }
-.divRating{
+.divRating {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
@@ -219,14 +215,15 @@ a .fa-cart-plus {
   transition: transform 0.5s ease;
 }
 .below-slide-window-card-img:hover {
-  transform: scale(1.1); 
-  height: 130px; 
-  width: 150px; 
-}.below-slide-window-card-img1:hover {
+  transform: scale(1.1);
+  height: 130px;
+  width: 150px;
+}
+.below-slide-window-card-img1:hover {
   border-radius: 8px;
-  transform: scale(1.1); 
-  height: 130px; 
-  width: 150px; 
+  transform: scale(1.1);
+  height: 130px;
+  width: 150px;
 }
 .below-slide-window-container1 {
   padding: 10px;
@@ -240,14 +237,14 @@ a .fa-cart-plus {
   justify-content: space-between;
   align-items: center;
 }
-.button-div{
+.button-div {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 15px;
 }
-.addtocart-button{
+.addtocart-button {
   outline: none;
   padding: 5px 12px;
   background-color: #3f48f0d6;
@@ -256,19 +253,19 @@ a .fa-cart-plus {
   font-size: 15px;
   border-radius: 8px;
 }
-#about-site{
- border-radius: 6px;
+#about-site {
+  border-radius: 6px;
   margin: 2%;
   background-color: white;
   padding: 3%;
   font-size: 22px;
 }
-#about-site h5 span{
+#about-site h5 span {
   color: #3174e1;
   font-weight: 900;
   text-transform: capitalize;
 }
-#social-handlers{
+#social-handlers {
   display: flex;
   gap: 25px;
   margin: 15px 0;
@@ -281,18 +278,52 @@ footer {
   font-size: 25px;
 }
 
-
 /* CSS for shopping cart */
-.shopping-cart{
+.shopping-cart {
   display: inline-block;
   flex-wrap: wrap;
   margin: 3%;
   height: auto;
   justify-content: center;
   font-size: 15px;
- 
 }
 
+
+/* Feedback Section */
+#form {
+  width: 70%;
+  padding: 8px;
+  gap: 15px;
+  /* align-items: center; */
+  padding: 4%;
+  margin: auto;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.collect-data {
+  border: 0.1px solid black;
+  background-color: rgb(221, 227, 232);
+  padding: 8px;
+  margin: auto;
+  width: 100%;
+  font-size: 20px;
+
+  border-radius: 6px;
+  text-align: start;
+}
+#submit {
+  margin: auto;
+  padding: 8px 16px;
+  margin-top: 15px;
+  font-size: 22px;
+  border-radius: 8px;
+  background-color: #3f48f0d6;
+  color: aliceblue;
+  border: none;
+}
 /* Media Queries for Responsiveness */
 
 @media screen and (max-width: 768px) {
@@ -325,6 +356,9 @@ footer {
   #slide-window {
     height: 100px;
   }
+  #form{
+    width: 85%;
+  }
 }
 @media screen and (max-width: 398px) {
   .below-slide-window-container1 {
@@ -333,57 +367,22 @@ footer {
   .below-slide-window-card1 {
     width: 150px;
     height: auto;
-    margin: 10px 5px
+    margin: 10px 5px;
   }
- 
+
   .divRating {
     font-size: 12px;
   }
   .addtocart-button {
-    padding: 6px ;
+    padding: 6px;
     font-size: 14px;
     margin-top: 10px;
     border-radius: 6px;
-}
-.button-div{
-  justify-content: space-between;
-}
-}
-
-
-/* Feedback Section */
-#form{
-  width: 70%;
-  padding: 8px;
-  gap: 15px;
-  /* align-items: center; */
-  padding: 4%;
-  margin:auto;
-  background-color: white;
-  border-radius: 8px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  }
+  .button-div {
+    justify-content: space-between;
+  }
  
 }
-.collect-data{
-  border: 0.1px solid black;
-  background-color: rgb(221, 227, 232);
-  padding: 8px;
-  margin: auto;
-  width: 100%;
-  font-size: 20px;
-  
-  border-radius: 6px;
-  text-align: start;
-}
-#submit{
- margin: auto;
- padding: 8px 16px;
- margin-top: 15px;
- font-size: 22px;
- border-radius: 8px;
- background-color: #3f48f0d6;
- color: aliceblue;
- border: none;
-}
+
+
