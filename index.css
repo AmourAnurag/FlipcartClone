@@ -365,13 +365,17 @@ footer {
     align-items: center;
   }
   .below-slide-window-card1 {
-    width: 150px;
+    width: 140px;
     height: auto;
     margin: 10px 5px;
   }
-
+  .below-slide-window-card-img1 {
+    height: 100px;
+    width: 120px;
+    
+}
   .divRating {
-    font-size: 12px;
+    font-size: 11px;
   }
   .addtocart-button {
     padding: 6px;
@@ -381,6 +385,7 @@ footer {
   }
   .button-div {
     justify-content: space-between;
+    margin-top: 0;
   }
  
 }
