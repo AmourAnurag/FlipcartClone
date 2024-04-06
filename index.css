@@ -195,6 +195,11 @@ a .fa-cart-plus {
   font-weight: 800;
   border-radius: 6px;
 }
+.below-slide-window-card1{
+  justify-content: space-between;
+  height: 210px;
+  font-size: 14px;
+}
 .below-slide-window-card1 {
   padding: 0;
 }
@@ -242,7 +247,7 @@ a .fa-cart-plus {
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 15px;
+  margin: auto;
 }
 .addtocart-button {
   outline: none;
@@ -273,6 +278,7 @@ a .fa-cart-plus {
 footer {
   width: 100%;
   align-items: center;
+  margin-top: 20px;
   font-weight: 700;
   text-align: center;
   font-size: 25px;
@@ -359,23 +365,28 @@ footer {
   #form{
     width: 85%;
   }
+  .shopping-cart{
+    font-size: 11px;
+  }
 }
 @media screen and (max-width: 398px) {
   .below-slide-window-container1 {
     align-items: center;
   }
+  .below-slide-window-card,
   .below-slide-window-card1 {
     width: 140px;
-    height: 187px;
+    font-size: 11px;
+    height: auto;
     margin: 10px 5px;
   }
-  .below-slide-window-card-img1 {
+ .below-slide-window-card-img1,.below-slide-window-card-img1 {
     height: 100px;
     width: 120px;
     
 }
   .divRating {
-    font-size: 11px;
+    font-size: 10px;
   }
   .addtocart-button {
     padding: 4px 7px;
@@ -385,8 +396,9 @@ footer {
   }
   .button-div {
     justify-content: space-between;
-    margin-top: 0;
+    margin: auto;
   }
+ 
  
 }
 

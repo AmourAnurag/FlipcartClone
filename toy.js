@@ -18,6 +18,8 @@ const toy={
         "./Electronics/toy16.webp",
         "./Electronics/toy17.webp",
         "./Electronics/toy18.webp",
+        "./Electronics/toy19.webp",
+        "./Electronics/toy20.jpg",
     ],
     price:[
         {
@@ -109,6 +111,16 @@ const toy={
            rating:"4.7⭐ | 15k",
            price: "899",
            msg:"75"
+        },
+        {  
+           rating:"4.2⭐ | 15k",
+           price: "599",
+           msg:"18"
+        },
+        {  
+           rating:"5⭐ | 115k",
+           price: "1199",
+           msg:"55"
         }
     ]
 }
