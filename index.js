@@ -103,7 +103,6 @@ toy.image.forEach((imagePath, index) => {
     // Create image element
     const img = document.createElement("img");
     img.src = imagePath;
-    console.log(imagePath);
     img.alt = "Electronics Image";
     img.classList.add("below-slide-window-card-img1");
 
@@ -150,7 +149,6 @@ toy.image.forEach((imagePath, index) => {
         const productPrice = toy.price[index].price;
         const productPay = Math.floor(totalPrice - (totalPrice * dis) / 100);
         const productDiscount=toy.price[index].msg;
-        console.log(productDiscount);
         addToCartAndRedirect(productImage,productName, productPrice,productPay,productDiscount);
     });
     button1.addEventListener("click", function () {

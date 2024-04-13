@@ -8,45 +8,39 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body style="background-color: white;">
-    <h1 style="color: rgb(42, 42, 245); margin: 15px;;width: 100%; ;">Shopping Cart</h1>
+<body style="background-color: white; width: 100%;">
+    <h1 style="color: rgb(42, 42, 245); margin: 15px;text-align: center;width: 100%; ;">Shopping Cart</h1>
     <div id="cart-items"></div>
     <div id="shopping-cart"></div>
     <div id="payment"></div>
 
 </body>
 <script>
-
     let discount = 0, pay = 0, total = 0, discountprice = 0;
     let cartItems;
-    pageload()
-    function pageload() {
-        document.addEventListener("DOMContentLoaded", function () {
-            // Retrieve cart items from localStorage
-             cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
-            const cartItemsContainer = document.getElementById('cart-items');
+    document.addEventListener("DOMContentLoaded", function () {
+        // Retrieve cart items from localStorage
+        cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItemsContainer = document.getElementById('cart-items');
 
-            // Check if the cart is empty
-            if (cartItems.length === 0) {
-                cartItemsContainer.innerHTML = `
+        // Check if the cart is empty
+        if (cartItems.length === 0) {
+            cartItemsContainer.innerHTML = `
             <div style="display:flex;align-items:center;margin:15px;width:auto;flex-direction:column;gap:15px;color: rgb(42, 42, 245);">
             <h1 >Your cart is empty.</h1>
             <h2> Kuch to kharid LO</h2>
-            <img src="./Electronics/cartEmpty.webp" alt="" style="width:50%;border-radius:8px">
+            <img src="./ProductType/bagShopping.webp" alt="" id="bag">
+            <a href="./index.html"><buttoon class="addtocart-button" style="width:40%;font-size:20px;padding:auto">Bact-To-Home</button></a>
             </div>
             `;
-            } else {
-                // Display each item in the cart
-                cartItems.forEach(item => {
-                    console.log(item);
-                    console.log(item.image);
+        } else {
+            // Display each item in the cart
+            cartItems.forEach(item => {
 
-                    const itemElement = document.createElement('div');
-                    itemElement.classList.add("shopping-cart")
-
-                    itemElement.innerHTML = `
-                    
+                const itemElement = document.createElement('div');
+                itemElement.classList.add("shopping-cart")
+                itemElement.innerHTML = `                  
                         <div>
                             <div class="below-slide-window-card1">
                                 <img src=${item.image} alt="" class="below-slide-window-card-img1">
@@ -57,13 +51,11 @@
                         </div>
                    
                     `;
-                    cartItemsContainer.appendChild(itemElement);
-                    updateCartDisplay();
-                }
-            )};
-     
-
-
+                cartItemsContainer.appendChild(itemElement);
+                updateCartDisplay();
+            }
+            )
+        };
 
         // Add event listeners for the "Remove from Cart" buttons
         const removeButtons = document.querySelectorAll('#remove-from-cart');
@@ -80,19 +72,14 @@
                 localStorage.setItem('cart', JSON.stringify(cartItems));
                 updateCartDisplay();
                 itemElement.remove();
-                
+
             }
-            
-               location.reload();
-            
+            location.reload();
         }
 
         function updateCartDisplay() {
             const paymentContainer = document.querySelector('#payment');
-            total = 0;
-            discount = 0;
-            discountprice = 0;
-            pay = 0;
+            let total = 0, discount = 0, discountprice = 0,pay = 0;
             cartItems.forEach(item => {
                 total += Number(item.price);
                 discount += Number(item.discount);
@@ -100,17 +87,16 @@
                 pay += Number(item.pay);
             });
             paymentContainer.innerHTML = `
-                     <div style="margin:20px;padding:10px; color:rgb(42, 42, 245);;width:auto;gap:12px">
-                     <h2>Total : ₹${total}</h2>
-                     <h2>Total Discount : ₹${discountprice}</h2>
-                     <h2>You need to Pay : ₹${pay}</h2>
+                     <div style="margin:20px;padding:10px; color:rgb(42, 42, 245);width:auto;gap:12px">
+                     <h3>Total : ₹${total}</h3>
+                     <h3>Total Discount : ₹${discountprice}</h3>
+                     <h3>You need to Pay : ₹${pay}</h3>
+
                      </div>
+                     <a href="./index.html"><buttoon class="addtocart-button" style="width:40%;font-size:20px;padding:auto;margin-left:36%">Bact-To-Home</button></a>
                     `;
-        pageload()
         }
     });
-    } 
+
 </script>
-
-
 </html>
