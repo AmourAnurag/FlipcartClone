@@ -48,8 +48,9 @@ header {
 }
 
 .second-header {
-  width: 30%;
+  width: 40%;
   display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -75,7 +76,7 @@ header {
   margin: 0 10px;
   outline: none;
   border: none;
-  font-size: 17px;
+  font-size: 12px;
   text-decoration: none;
 }
 
@@ -330,6 +331,9 @@ footer {
   color: aliceblue;
   border: none;
 }
+#bag{
+  width: 30%;
+}
 /* Media Queries for Responsiveness */
 
 @media screen and (max-width: 768px) {
@@ -368,6 +372,9 @@ footer {
   .shopping-cart{
     font-size: 11px;
   }
+  #bag{
+    width: 80%;
+  }
 }
 @media screen and (max-width: 398px) {
   .below-slide-window-container1 {
@@ -398,7 +405,9 @@ footer {
     justify-content: space-between;
     margin: auto;
   }
- 
+  #bag{
+    width: 80%;
+  }
  
 }
 

@@ -171,4 +171,4 @@ const cartCount=document.querySelector('#cart-sup')
 const cartArrayString = localStorage.getItem('cart');
 const cartArray = JSON.parse(cartArrayString);
 const arrayLength = cartArray.length;
-cartCount.textContent=arrayLength
+cartCount.textContent=arrayLength >0 ? arrayLength:"";
