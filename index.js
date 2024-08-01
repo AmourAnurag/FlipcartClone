@@ -150,6 +150,7 @@ toy.image.forEach((imagePath, index) => {
         const productPay = Math.floor(totalPrice - (totalPrice * dis) / 100);
         const productDiscount=toy.price[index].msg;
         addToCartAndRedirect(productImage,productName, productPrice,productPay,productDiscount);
+        window.location.href = "./cart.html";
     });
     button1.addEventListener("click", function () {
         window.location.href = "./cart.html";

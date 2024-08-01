@@ -10,6 +10,7 @@ body {
   background-color: rgb(221, 227, 232);
 }
 
+/* header section started here */
 header {
   padding: 10px;
   width: 100%;
@@ -102,8 +103,9 @@ a .fa-cart-plus {
   font-size: 10px;
   color: red;
 }
+/* header section ended here */
 
-/* Product-Type */
+/* Product-Type just below header */
 #overview {
   padding: 10px;
   margin: 1% 2%;
@@ -124,7 +126,7 @@ a .fa-cart-plus {
   font-weight: 800;
 }
 
-/* Slide-Window */
+/* Slide-Window sliding image */
 #slide-window {
   position: relative;
   margin: 2%;
@@ -196,7 +198,7 @@ a .fa-cart-plus {
   font-weight: 800;
   border-radius: 6px;
 }
-.below-slide-window-card1{
+.below-slide-window-card1 {
   justify-content: space-between;
   height: 210px;
   font-size: 14px;
@@ -259,6 +261,8 @@ a .fa-cart-plus {
   font-size: 15px;
   border-radius: 8px;
 }
+
+/* about section started here */
 #about-site {
   border-radius: 6px;
   margin: 2%;
@@ -276,6 +280,9 @@ a .fa-cart-plus {
   gap: 25px;
   margin: 15px 0;
 }
+
+/* about section ended here */
+
 footer {
   width: 100%;
   align-items: center;
@@ -294,7 +301,6 @@ footer {
   justify-content: center;
   font-size: 15px;
 }
-
 
 /* Feedback Section */
 #form {
@@ -331,9 +337,10 @@ footer {
   color: aliceblue;
   border: none;
 }
-#bag{
+#bag {
   width: 30%;
 }
+
 /* Media Queries for Responsiveness */
 
 @media screen and (max-width: 768px) {
@@ -367,13 +374,13 @@ footer {
   #slide-window {
     height: 100px;
   }
-  #form{
+  #form {
     width: 85%;
   }
-  .shopping-cart{
+  .shopping-cart {
     font-size: 11px;
   }
-  #bag{
+  #bag {
     width: 80%;
   }
 }
@@ -388,11 +395,11 @@ footer {
     height: auto;
     margin: 10px 5px;
   }
- .below-slide-window-card-img1,.below-slide-window-card-img1 {
+  .below-slide-window-card-img1,
+  .below-slide-window-card-img1 {
     height: 100px;
     width: 120px;
-    
-}
+  }
   .divRating {
     font-size: 10px;
   }
@@ -406,10 +413,7 @@ footer {
     justify-content: space-between;
     margin: auto;
   }
-  #bag{
+  #bag {
     width: 80%;
   }
- 
 }
-
-
