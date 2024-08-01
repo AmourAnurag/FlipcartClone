@@ -24,7 +24,7 @@ function addToCartAndRedirect(productImage,productName, productPrice,productPay,
     localStorage.setItem('cart', JSON.stringify(cartItems));
 
     // Redirect to cart.html
-    window.location.href = "cart.html";
+   
 }
 
 //menu bar button code
