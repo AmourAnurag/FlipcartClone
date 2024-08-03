@@ -3,6 +3,7 @@ let totalCartItem=0;
 
 import elec from "./elec.js";
 import toy from "./toy.js";
+import general from "./general.js";
 
 // Function to handle adding items to the cart and redirecting to cart.html
 function addToCartAndRedirect(productImage,productName, productPrice,productPay,productDiscount) {
@@ -164,6 +165,77 @@ toy.image.forEach((imagePath, index) => {
 
     // Append card to the container
     container1.appendChild(card);
+});
+const container2 = document.querySelector(".below-slide-window-container2");
+general.image.forEach((imagePath, index) => {
+    // Create card element
+    const card = document.createElement("div");
+    card.classList.add("below-slide-window-card1");
+
+    // Create image element
+    const img = document.createElement("img");
+    img.src = imagePath;
+    img.alt = "Electronics Image";
+    img.classList.add("below-slide-window-card-img1");
+
+    // Create price and rating element
+    const divRating = document.createElement("div");
+    divRating.classList.add("divRating");
+    const price = document.createElement("span");
+    const rating = document.createElement("span");
+    price.textContent = "M.R.P : ₹" + general.price[index].price;
+    rating.textContent = general.price[index].rating;
+    divRating.appendChild(price);
+    divRating.appendChild(rating);
+
+    // Create pay and discount element
+    const messageDiv = document.createElement("div");
+    messageDiv.classList.add("divRating");
+    const pay = document.createElement("span");
+    const discount = document.createElement("span");
+    discount.style.color = "blue";
+    discount.textContent = "(Off upto " + general.price[index].msg + " %)";
+    let dis = Number(general.price[index].msg);
+    let totalPrice = Number(general.price[index].price);
+    pay.textContent = "Pay :₹" + Math.floor(totalPrice - (totalPrice * dis) / 100);
+    messageDiv.appendChild(pay);
+    messageDiv.appendChild(discount);
+
+    // Create AddToCart Button
+    const div = document.createElement("div");
+    div.classList.add("button-div");
+    const button = document.createElement("button");
+    const button1 = document.createElement("button");
+    button.classList.add("addtocart-button");
+    button1.classList.add("addtocart-button");
+    button.innerText = "Add to Cart";
+    button1.innerText = "Buy";
+    div.appendChild(button);
+    div.appendChild(button1);
+
+    // Attach event listeners to "Add to Cart" and "Buy" buttons
+    button.addEventListener("click", function () {
+        
+        const productImage=imagePath
+        const productName = general.price[index].rating;
+        const productPrice = general.price[index].price;
+        const productPay = Math.floor(totalPrice - (totalPrice * dis) / 100);
+        const productDiscount=general.price[index].msg;
+        addToCartAndRedirect(productImage,productName, productPrice,productPay,productDiscount);
+        window.location.href = "./cart.html";
+    });
+    button1.addEventListener("click", function () {
+        window.location.href = "./cart.html";
+    });
+
+    // Append elements to the card
+    card.appendChild(img);
+    card.appendChild(divRating);
+    card.appendChild(messageDiv);
+    card.appendChild(div);
+
+    // Append card to the container
+    container2.appendChild(card);
 });
 
 //update cart icon
